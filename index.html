@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pallankuli - Traditional Indian Board Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="mode-selection">
+            <h1>Pallankuli</h1>
+            <p>Choose your game mode</p>
+            <button id="single-player-btn">Single Player</button>
+            <button id="two-player-btn">Two Player</button>
+        </div>
+        
+        <div id="game-board" style="display: none;">
+            <div class="player-info" id="player-1-info">
+                <div class="score-container">
+                    <span class="score-label">Score:</span>
+                    <div class="store" id="store-1">0</div>
+                </div>
+                <span class="player-name">Player 1</span>
+            </div>
+            
+            <div class="board-grid">
+                <div class="board-cups-container" id="cups-container"></div>
+            </div>
+            
+            <div class="player-info" id="player-0-info">
+                <div class="score-container">
+                    <span class="score-label">Score:</span>
+                    <div class="store" id="store-0">0</div>
+                </div>
+                <span class="player-name">Player 2</span>
+            </div>
+        </div>
+        
+        <div id="winner-overlay" style="display: none;">
+            <div class="winner-message"></div>
+            <button id="new-game-btn">New Game</button>
+        </div>
+        
+        <div id="ai-thinking-indicator" style="display: none;">
+            <div class="thinking-message">AI is thinking...</div>
+        </div>
+        
+        <div id="turn-end-feedback" style="display: none;">
+            <div class="turn-end-message"></div>
+        </div>
+        
+        <div id="animation-settings">
+            <label for="animation-speed">Animation Speed:</label>
+            <select id="animation-speed" aria-label="Animation speed control">
+                <option value="0">Instant</option>
+                <option value="5" selected>Normal</option>
+                <option value="10">Slow</option>
+            </select>
+            
+            <label for="step-mode" style="margin-left: 20px;">
+                <input type="checkbox" id="step-mode" aria-label="Step-by-step mode">
+                Step-by-Step Mode
+            </label>
+        </div>
+        
+        <div id="step-control" style="display: none;">
+            <button id="next-step-btn">Next Step</button>
+            <span id="step-info"></span>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
